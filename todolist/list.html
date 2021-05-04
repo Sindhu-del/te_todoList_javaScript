@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+ integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+    <title>To Do List</title>
+    <style>
+        .red{
+            color:red;
+        }
+        .green{
+            color:green;
+        }
+        .blue{
+            color:lightblue;
+
+        }
+        .list-group{font-size: 20px;}
+
+        body{
+    background-image: url("./images/bg10.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    height: auto;
+    width: 100%;
+}
+form{
+    background:linear-gradient(45deg, #1f1c2c, #928dab);
+    box-shadow: 0 0 10px burlywood;
+}
+a{
+    color: wheat;
+}
+a:hover{
+    color:#1f1c2c;
+}
+#todolist{
+    background: linear-gradient(45deg, #0e0d13, #928dab);
+    box-shadow: 0 0 10px burlywood;
+    
+}
+button{
+    background: linear-gradient(45deg, #2c2725,#00223e) ;
+    color: black;
+}
+    </style>
+</head>
+<body>
+  
+
+    <div class="container list">
+    <header>
+        <a href="#" class="navbar-brand"><span><img src="./images/logo.png"  alt="logo" width="50px" height="50px"><span style="color: coral; font-size: 25px;">ToDo</span><span style="color: wheat;">List</span>
+        </span></a>
+
+    </header>
+
+        <div class="row">
+            <div class="col mx-auto col-md-8 mt-3 text-center">
+                <div class="alert align-item-center" id="message"> </div>
+                <form action="" id="itemForm">
+                    <h3> <span style="color: coral; font-size: 25px;">ToDo</span><span style="color: wheat;">List</span>
+                    </h3>
+                    <div class="input group mb-3">
+                       <input type="text" name="" class="form-control" id="itemInput" placeholder="Enter task">
+                       <button class="btn text-white mt-3">Add Task</button>
+                    </div>
+                </form>
+                <div id="todolist">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item" data-type="all">
+                        <a class="nav-link active" href="#">All</a>
+                      </li>
+                      <li class="nav-item" data-type="todo" >
+                        <a class="nav-link"  href="#">To Do</a>
+                      </li>
+                      <li class="nav-item" data-type="done" >
+                        <a class="nav-link" href="#">Completed</a>
+                      </li>
+                </ul>
+            </div>
+                <!--lists-->
+                <ul class="list-group list-group-flush" id="itemsList">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+
+                        <span>task1</span>
+                        <span>
+                            <a> <i class="bi bi-check-circle green"></i></a>
+                            <a> <i class="bi bi-pencil-square blue"></i></a>
+                            <a> <i class="bi bi-trash-fill red"></i></a>
+                        </span>
+                    </li>
+                </ul>
+                <input type="hidden" name="" id="objIndex" >
+                <input type="hidden" name="" id="tabValue" value="all">
+            </div>
+        </div>
+
+    </div>
+    
+    <script src="./list.js"></script>
+</body>
+</html>
